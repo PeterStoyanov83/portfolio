@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Peter Stoyanov - Portfolio</title>
+    <style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #eef5ff; /* Light blue background */
+  color: #333;
+  overflow-x: hidden;
+  margin-left: 120px;
+  margin-right: 120px;
+}
+
+header {
+  background-color: #4ea8c3; /* Deep blue header background */
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+
+h1 {
+  margin: 0;
+  color: #fff;
+  transition: color 0.5s;
+}
+
+nav {
+  background-color: #88d8b0;
+  padding: 10px;
+  transition: background-color 0.5s;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav ul li a {
+  color: #333;
+  text-decoration: none;
+  padding: 5px;
+  transition: color 0.5s;
+}
+
+section {
+  padding: 20px;
+  margin: 20px;
+  background-color: #f8f8f8;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  color: #333;
+}
+
+footer {
+  background-color: #4ea8c3; /* Deep blue footer background */
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.5s;
+}
+
+.about-img {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-img::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(to bottom right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  filter: blur(30px);
+  z-index: 1;
+}
+
+.about-img img {
+  display: block;
+  width: 100%;
+  border-radius: 10px; /* Adjust the border-radius value to control the roundness of the edges */
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>Peter Stoyanov</h1>
+    <p>Software Developer, specializing in Python.</p>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<section id="about" style="text-align: center;">
+    <h2>About Me</h2>
+    <img src="peter_photo_clone.jpg" alt="Peter Stoyanov" class="about-img">
+    <p class="fade-in">
+        Hello, my name is Peter. I started my journey in IT with an online course in Python.<br>
+        That was 1 year ago.<br>
+        After 15 years of being a sushi chef, I decided that my career in the restaurant industry<br>
+        could not be improved. I found my new challenge in IT and a new chapter in my life began.<br>
+    </p>
+</section>
+
+
+<section id="projects">
+    <h2>Projects</h2>
+
+    <div class="project">
+        <div class="project-content">
+            <img src="pong_thumbnail_photo.png" alt="Project 1 Thumbnail" width="200" height="200">
+            <h3>The Game of Pong</h3>
+        </div>
+        <p>
+            Description:<br>
+            The Pong game you shared is a simple implementation of the classic Pong game using Python and the Turtle
+            graphics library.
+        </p>
+        <p>
+            Libraries Used:<br>
+            <strong>Turtle:</strong> The Turtle library is a built-in Python library that provides a simple way to
+            create graphics and animations. It is used in this game to create the game window, paddles, ball, and handle
+            the game's animation and movement.<br>
+            <strong>OS:</strong> The OS library is used to manage the sounds in the game.
+        </p>
+        <p>
+            Techniques Employed:<br>
+            <strong>Game Loop:</strong> The main game loop is a while loop that continuously updates the game state and
+            handles user input. It ensures that the game runs smoothly by updating the positions of the paddles and
+            ball, detecting collisions, and updating the scores.<br>
+            <strong>Keyboard Input:</strong> The game captures keyboard input using the wn.onkeypress() function from
+            the Turtle library.<br>
+            <strong>Collision Detection:</strong> The game checks for collisions between the ball and the paddles, as
+            well as the ball and the top/bottom boundaries of the game window. This allows the ball to bounce off the
+            paddles and walls.<br>
+            <strong>Score Tracking:</strong> The game keeps track of the score for each player (Player A and Player B)
+            using the score_a and score_b variables. The scores are displayed on the screen using the Turtle library's
+            pen object.<br>
+            <strong>Sound Effects:</strong> The game incorporates sound effects using the os.system() function to play
+            audio files when certain events occur, such as the ball hitting the paddles, scoring points, or the game
+            ending.<br>
+        </p>
+        <p>
+            To play the game, follow these steps:<br>
+            1. Install PyCharm: PyCharm is an Integrated Development Environment (IDE) for Python. You can download and
+            install PyCharm from the official website (https://www.jetbrains.com/pycharm/). Choose the appropriate
+            version for your operating system and follow the installation instructions.<br>
+            2. Install Python: Python is the programming language used to run the game. You can download Python from the
+            official Python website (https://www.python.org/). Choose the latest stable version for your operatingsystem
+            and follow the installation instructions.<br>
+            3. Install the required libraries: The game requires the Turtle library, which is a built-in library in
+            Python. There is no need to install it separately.<br>
+            4. Open the game in PyCharm: Once you have PyCharm and Python installed, open PyCharm and create a new
+            Python project. Copy the code for the Pong game into a new Python file in your project.<br>
+            5. Run the game: In PyCharm, click the Run button or press the designated hotkey to run the game. The game
+            window should open, and you can start playing by using the keyboard controls specified in the code.
+        </p>
+        <a href="https://github.com/PeterStoyanov83/PONG" target="_blank">Link to the GitHub source code </a>
+    </div>
+
+
+    <div class="project">
+        <div class="project-content">
+            <img src="rpsls_game_thumbnail.png" alt="Project 2 Thumbnail" width="200" height="200">
+            <h3>Rock Paper Scissors Lizard Spock</h3>
+        </div>
+        <p>
+            Description:<br>
+            The Rock Paper Scissors Lizard Spock game is an expanded version of the classic Rock Paper Scissors
+            game, adding two additional options: Lizard and Spock. This game allows you to compete against the
+            computer by choosing one of the available moves and seeing who wins based on the rules of the game.
+        </p>
+        <p>
+            Libraries Used:<br>
+            <strong>termcolor:</strong> The termcolor library is used to add colored output to the terminal. It
+            provides functions like `colored()` and `cprint()` to print text in different colors. It is used in this
+            game to enhance the visual display of the game results.
+        </p>
+        <p>
+            Techniques Employed:<br>
+            <strong>Random Number Generation:</strong> The `random` module is used to generate a random number
+            between 1 and 5, representing the computer's move. This ensures a random selection of moves for the
+            computer.<br>
+            <strong>Dictionary Lookup:</strong> A dictionary is used to map the generated random number to the
+            corresponding move (Rock, Paper, Scissors, Lizard, or Spock). This lookup technique allows for efficient and
+            concise retrieval of the computer's move.<br>
+            <strong>Conditional Statements:</strong> The game uses conditional statements (if-elif-else) to determine
+            the
+            outcome of each round based on the chosen moves. It compares the player's move and the computer's move to
+            determine the winner or if it's a draw.<br>
+            <strong>Score Tracking:</strong> The game keeps track of the player's and computer's points using the
+            `PLAYER_POINTS` and `COMPUTER_POINTS` variables. Points are incremented based on the outcome of each
+            round.<br>
+            <strong>User Input:</strong> The game prompts the player to choose a move by entering a command (r, p, s, l,
+            o)
+            corresponding to Rock, Paper, Scissors, Lizard, or Spock. The `input()` function is used to capture the
+            user's input.<br>
+        </p>
+        <p>
+            To play the game, follow these steps:<br>
+            1. Run the Python script in your preferred Python environment.<br>
+            2. The game will prompt you to choose a move by entering the corresponding command (r, p, s, l, o).<br>
+            3. The computer will randomly select a move.<br>
+            4. The game will display the computer's move and determine the winner or if it's a draw.<br>
+            5. The player's and computer's points will be updated based on the outcome.<br>
+            6. You can choose to play another round by entering 'y' or exit the game by entering 'n'.<br>
+        </p>
+        <a href="https://github.com/PeterStoyanov83/RockPaperSissorsLizardSpock" target="_blank">Link to the GitHub
+            source code </a>
+    </div>
+
+    <div class="project">
+        <div class="project-content">
+            <img src="basic_calc_thumbnail.png" alt="Calculator Machine Thumbnail" width="200" height="200">
+            <h3>Calculator Machine</h3>
+        </div>
+        <p>
+            The Calculator Machine is a simple command-line calculator program that allows users to perform basic
+            arithmetic operations such as addition, subtraction, multiplication, and division. It was created by Peter
+            Stoyanov and inspired by the SoftUni Fundamentals course taught by lecturer M. Zahariev.
+        </p>
+        <p>
+            To use the Calculator Machine, follow these steps:
+        <ol>
+            <li>Run the Python script in your preferred Python environment.</li>
+            <li>Choose one of the available options:</li>
+            <ul>
+                <li>1 - Addition</li>
+                <li>2 - Subtraction</li>
+                <li>3 - Multiplication</li>
+                <li>4 - Division</li>
+                <li>5 - Exit</li>
+            </ul>
+            <li>Enter the first number.</li>
+            <li>Enter the second number.</li>
+            <li>The program will perform the selected operation and display the result.</li>
+            <li>Repeat the process or choose option 5 to exit the program.</li>
+        </ol>
+        </p>
+        <a href="https://github.com/PeterStoyanov83/basic_calculator" target="_blank">Link to the GitHub source code </a>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <p class="fade-in">
+        Peter Stoyanov<br>
+        Address: Haupstr. 26<br>
+        4146, Hochwald<br>
+        Tel:<br>
+        Email: peterstoyanov83@gmail.com
+    </p>
+</section>
+
+<footer>
+    <p>&copy; 2023 Peter Stoyanov. All rights reserved.</p>
+</footer>
+
+<script>
+    function fadeInElements() {
+      const sections = document.querySelectorAll("section");
+
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+
+        if (sectionTop < window.innerHeight * 0.8) {
+          section.classList.add("fade-in");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", fadeInElements);
+    window.addEventListener("load", fadeInElements);
+
+</script>
+</body>
+</html>

@@ -75,7 +75,11 @@ footer {
   background-color: #4ea8c3; /* Deep blue footer background */
   padding: 20px;
   text-align: center;
-  transition: background-color 0.5s;
+  transition: background-color 0.7s;
+}
+.about-content {
+  display: flex;
+  align-items: flex-start;
 }
 
 .about-img {
@@ -84,6 +88,15 @@ footer {
   max-width: 300px;
   position: relative;
   overflow: hidden;
+  flex: 0 0 auto;
+  margin-right: 20px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.about-text {
+  flex: 1 1 auto;
 }
 
 .about-img::after {
@@ -125,6 +138,8 @@ html {
 
 
 
+
+
     </style>
 </head>
 <body>
@@ -150,7 +165,8 @@ html {
         </div>
         <div class="about-text">
             <p>
-                Hello everyone, my name is Peter Stoyanov, and I am thrilled to have the opportunity to share my story
+                Hello everyone,<br>
+                my name is Peter Stoyanov, and I am thrilled to have the opportunity to share my story
                 with you.
                 Throughout my life, I have embarked on various careers and pursued diverse passions, each contributing
                 to my
@@ -346,7 +362,7 @@ html {
             Stoyanov and inspired by the SoftUni Fundamentals course taught by lecturer M. Zahariev.
         </p>
         <p>
-            To use the Calculator Machine, follow these steps:
+            <strong>To use the Calculator Machine, follow these steps:</strong>
         </p>
         <ol>
             <li>Run the Python script in your preferred Python environment.</li>
@@ -395,6 +411,8 @@ html {
 
     window.addEventListener("scroll", fadeInElements);
     window.addEventListener("load", fadeInElements);
+
+
 
 
 

@@ -121,6 +121,10 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
+
+
     </style>
 </head>
 <body>
@@ -139,25 +143,72 @@ html {
 
 <section id="about" style="text-align: left;">
     <h2>About Me</h2>
-    <img src="peter_photo_clone.jpg" alt="Peter Stoyanov" class="about-img">
-    <p>
-		Hello everyone, my name is Peter Stoyanov, and I am thrilled to have the opportunity to share my story with you. Throughout my life, I have embarked on various careers and pursued diverse passions, each contributing to my personal growth and shaping me into the versatile individual I am today. Join me as I take you through my strengths, personal achievements, and unwavering commitment to learning.
-	</p>
-	<h2>Strengths</h2>
-	<p>
-		From a young age, computers have been my interest, and my immersion in the vast world of IT allows me to excel in learning new technologies, particularly Python. Moreover, my background as an avid luthier and sushi chef brings a unique set of experiences and knowledge that enables me to provide fresh perspectives and adapt quickly to new situations.
-	</p>
-	<h2>Personal Achievements</h2>
-	<p>
-		My journey has taken me through various careers, and while they may seem different, they all share a common thread: people. As a clown performer, I have had the opportunity to lead workshops and trainings, connecting with individuals from all walks of life and professions. This international experience has taught me invaluable lessons in adaptability and resilience, as I have successfully built lives in multiple locations. Additionally, my mastery of the sushi craft has opened doors to exciting opportunities, including invitations to forums, events, and private parties. The satisfaction of providing unforgettable culinary experiences and leading workshops, projects, and restaurant trainings has fueled my drive for continuous learning and personal growth.
-	</p>
-	<h2>Learning</h2>
-	<p>
-		Currently, I am enrolled in an online full-stack Python Developer course, which I began in July 2022. I am proud to have completed the "Fundamentals" module and passed the associated exams, showcasing my commitment to excellence. Currently, I am immersing myself in the Advanced and OOP modules, with an anticipated completion date in August. This timing aligns perfectly with my plan to join a Bootcamp in the Fall, demonstrating my meticulous planning and dedication to achieving my goals. I stay abreast of the latest developments in AI tools and applications, ensuring I remain at the forefront of technological advancements. In the near future, I am excited to tackle the challenge of learning the German language and further honing my skills in guitar repairs and production, which I picked up during the pandemic lockdowns.
-	</p>
-	<p>
-		Thank you for taking the time to get to know me, and I look forward to embarking on new opportunities that allow me to learn, grow, and make a positive impact.
-	</p>
+
+    <div class="about-content">
+        <div class="about-img">
+            <img src="peter_photo_clone.jpg" alt="Peter Stoyanov">
+        </div>
+        <div class="about-text">
+            <p>
+                Hello everyone, my name is Peter Stoyanov, and I am thrilled to have the opportunity to share my story
+                with you.
+                Throughout my life, I have embarked on various careers and pursued diverse passions, each contributing
+                to my
+                personal growth and shaping me into the versatile individual I am today. Join me as I take you through
+                my
+                strengths, personal achievements, and unwavering commitment to learning.
+            </p>
+            <h3>Strengths</h3>
+            <p>
+                From a young age, computers have been my interest, and my immersion in the vast world of IT allows me to
+                excel
+                in learning new technologies, particularly Python. Moreover, my background as an avid luthier and sushi
+                chef
+                brings a unique set of experiences and knowledge that enables me to provide fresh perspectives and adapt
+                quickly
+                to new situations.
+            </p>
+            <h3>Personal Achievements</h3>
+            <p>
+                My journey has taken me through various careers, and while they may seem different, they all share a
+                common
+                thread: people. As a clown performer, I have had the opportunity to lead workshops and trainings,
+                connecting
+                with individuals from all walks of life and professions. This international experience has taught me
+                invaluable
+                lessons in adaptability and resilience, as I have successfully built lives in multiple locations.
+                Additionally,
+                my mastery of the sushi craft has opened doors to exciting opportunities, including invitations to
+                forums,
+                events, and private parties. The satisfaction of providing unforgettable culinary experiences and
+                leading
+                workshops, projects, and restaurant trainings has fueled my drive for continuous learning and personal
+                growth.
+            </p>
+            <h3>Learning</h3>
+            <p>
+                Currently, I am enrolled in an online full-stack Python Developer course, which I began in July 2022. I
+                am proud
+                to have completed the "Fundamentals" module and passed the associated exams, showcasing my commitment to
+                excellence. Currently, I am immersing myself in the Advanced and OOP modules, with an anticipated
+                completion
+                date in August. This timing aligns perfectly with my plan to join a Bootcamp in the Fall, demonstrating
+                my
+                meticulous planning and dedication to achieving my goals. I stay abreast of the latest developments in
+                AI tools
+                and applications, ensuring I remain at the forefront of technological advancements. In the near future,
+                I am
+                excited to tackle the challenge of learning the German language and further honing my skills in guitar
+                repairs
+                and production, which I picked up during the pandemic lockdowns.
+            </p>
+            <p>
+                Thank you for taking the time to get to know me, and I look forward to embarking on new opportunities
+                that allow
+                me to learn, grow, and make a positive impact.
+            </p>
+        </div>
+    </div>
 </section>
 
 
@@ -166,7 +217,7 @@ html {
 
     <div class="project">
         <div class="project-content">
-            <img src="pong_thumbnail_photo.png" alt="Project 1 Thumbnail" width="200" height="200">
+            <img src="pong_thumbnail_photo.png" alt="Project 1 Thumbnail" width="400" height="400">
             <h3>The Game of Pong</h3>
         </div>
         <p>
@@ -182,7 +233,7 @@ html {
             <strong>OS:</strong> The OS library is used to manage the sounds in the game.
         </p>
         <p>
-            Techniques Employed:<br>
+            <strong>Techniques Employed:</strong><br><br>
             <strong>Game Loop:</strong><br>
             The main game loop is a while loop that continuously updates the game state and
             handles user input. It ensures that the game runs smoothly by updating the positions of the paddles and
@@ -192,9 +243,8 @@ html {
             the Turtle library.<br>
             <br>
             <strong>Collision Detection:</strong><br>
-            The game checks for collisions between the ball and the paddles, as
-            well as the ball and the top/bottom boundaries of the game window. This allows the ball to bounce off the
-            paddles and walls.<br>
+            The game checks for collisions between the ball and the paddles, as well as the ball and the top/bottom
+            boundaries of the game window. This allows the ball to bounce off the paddles and walls.<br>
             <strong>Score Tracking:</strong><br>
             The game keeps track of the score for each player (Player A and Player B)
             using the score_a and score_b variables. The scores are displayed on the screen using the Turtle library's
@@ -203,27 +253,39 @@ html {
             audio files when certain events occur, such as the ball hitting the paddles, scoring points, or the game
             ending.<br>
         </p>
+
         <p>
-            To play the game, follow these steps:<br>
-            1. Install PyCharm: PyCharm is an Integrated Development Environment (IDE) for Python. You can download and
-            install PyCharm from the official website (https://www.jetbrains.com/pycharm/). Choose the appropriate
-            version for your operating system and follow the installation instructions.<br>
-            2. Install Python: Python is the programming language used to run the game. You can download Python from the
-            official Python website (https://www.python.org/). Choose the latest stable version for your operating
-            system and follow the installation instructions.<br>
-            3. Install the required libraries: The game requires the Turtle library, which is a built-in library in
-            Python. There is no need to install it separately.<br>
-            4. Open the game in PyCharm: Once you have PyCharm and Python installed, open PyCharm and create a new
-            Python project. Copy the code for the Pong game into a new Python file in your project.<br>
-            5. Run the game: In PyCharm, click the Run button or press the designated hotkey to run the game. The game
-            window should open, and you can start playing by using the keyboard controls specified in the code.
+            To play the game, follow these steps:<br><br>
+        <ol>
+            <li>Install PyCharm: PyCharm is an Integrated Development Environment (IDE) for Python. You can download and
+                install PyCharm from the official website <a href="https://www.jetbrains.com/pycharm/">here</a>. Choose
+                the appropriate version for your operating system and follow the installation instructions.
+            </li>
+            <br>
+            <li>Install Python: Python is the programming language used to run the game. You can download Python from
+                the official Python website <a href="https://www.python.org/">here</a>. Choose the latest stable version
+                for your operating system and follow the installation instructions.
+            </li>
+            <br>
+            <li>Install the required libraries: The game requires the Turtle library, which is a built-in library in
+                Python. There is no need to install it separately.
+            </li>
+            <br>
+            <li>Open the game in PyCharm: Once you have PyCharm and Python installed, open PyCharm and create a new
+                Python project. Copy the code for the Pong game into a new Python file in your project.
+            </li>
+            <br>
+            <li>Run the game: In PyCharm, click the Run button or press the designated hotkey to run the game. The game
+                window should open, and you can start playing by using the keyboard controls specified in the code.
+            </li>
+        </ol>
         </p>
         <a href="https://github.com/PeterStoyanov83/PONG" target="_blank">Link to the GitHub source code</a>
     </div>
-
+    <hr style="border: none; border-top: 2px solid #ccc; margin: 20px 0;">
     <div class="project">
         <div class="project-content">
-            <img src="rpsls_game_thumbnail.png" alt="Project 2 Thumbnail" width="200" height="200">
+            <img src="rpsls_game_thumbnail.png" alt="Project 2 Thumbnail" width="400" height="400">
             <h3>Rock Paper Scissors Lizard Spock</h3>
         </div>
         <p>
@@ -267,12 +329,14 @@ html {
             5. The player's and computer's points will be updated based on the outcome.<br>
             6. You can choose to play another round by entering 'y' or exit the game by entering 'n'.<br>
         </p>
-        <a href="https://github.com/PeterStoyanov83/RockPaperSissorsLizardSpock" target="_blank">Link to the GitHub source code</a>
+        <a href="https://github.com/PeterStoyanov83/RockPaperSissorsLizardSpock" target="_blank">Link to the GitHub
+            source code</a>
     </div>
+    <hr style="border: none; border-top: 2px solid #ccc; margin: 20px 0;">
 
     <div class="project">
         <div class="project-content">
-            <img src="basic_calc_thumbnail.png" alt="Calculator Machine Thumbnail" width="200" height="200">
+            <img src="basic_calc_thumbnail.png" alt="Calculator Machine Thumbnail" width="400" height="400">
             <h3>Calculator Machine</h3>
         </div>
         <p>
@@ -306,11 +370,9 @@ html {
 <section id="contact">
     <h2>Contact Me</h2>
     <p class="fade-in">
-        Peter Stoyanov<br>
-        Address: Haupstr. 26<br>
-        4146, Hochwald<br>
-        Tel:<br>
-        Email: peterstoyanov83@gmail.com
+        Peter Stoyanov<br><br>
+        Email: peterstoyanov83@gmail.com<br>
+
     </p>
 </section>
 
@@ -333,6 +395,10 @@ html {
 
     window.addEventListener("scroll", fadeInElements);
     window.addEventListener("load", fadeInElements);
+
+
+
+
 
 </script>
 </body>

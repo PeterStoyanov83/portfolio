@@ -116,7 +116,17 @@ footer {
   width: 100%;
   border-radius: 10px; /* Adjust the border-radius value to control the roundness of the edges */
 }
+.certificate-link {
+  display: inline-block;
+}
 
+.certificate-link img {
+  transition: box-shadow 0.3s;
+}
+
+.certificate-link:hover img {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
 .fade-in {
   opacity: 1;
   transform: translateY(0);
@@ -133,13 +143,6 @@ footer {
 html {
   scroll-behavior: smooth;
 }
-
-
-
-
-
-
-
 
 
 
@@ -227,8 +230,8 @@ html {
 
             </ul>
             </p>
-            <a href="https://softuni.bg/certificates/details/173909/47301bb5" target="_blank">
-                <img src="thumbnail_image.jpg" alt="My Python Certificate" width="200" height="200">
+            <a href="https://softuni.bg/certificates/details/173909/47301bb5" target="_blank" class="certificate-link">
+                <img src="certificate.png" alt="My Python Certificate" width="200" height="300">
             </a>
 
 
@@ -427,6 +430,7 @@ html {
 
     window.addEventListener("scroll", fadeInElements);
     window.addEventListener("load", fadeInElements);
+
 
 
 

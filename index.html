@@ -3,155 +3,757 @@
 <head>
     <title>Peter Stoyanov - Portfolio</title>
     <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    :root {
+      --primary-color: #2563eb;
+      --secondary-color: #10b981;
+      --accent-color: #f59e0b;
+      --text-primary: #1f2937;
+      --text-secondary: #6b7280;
+      --background-light: #f8fafc;
+      --background-white: #ffffff;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-accent: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #eef5ff; /* Light blue background */
-  color: #333;
-  overflow-x: hidden;
-  margin-left: 120px;
-  margin-right: 120px;
-}
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      line-height: 1.6;
+      color: var(--text-primary);
+      background: var(--background-light);
+      overflow-x: hidden;
+      margin-left: 120px;
+      margin-right: 120px;
+    }
 
-header {
-  background-color: #4ea8c3; /* Deep blue header background */
-  padding: 20px;
-  text-align: center;
-  transition: background-color 0.5s;
-}
+    /* Loading Animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-h1 {
-  margin: 0;
-  color: #fff;
-  transition: color 0.5s;
-}
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
-nav {
-  background-color: #88d8b0;
-  padding: 10px;
-  transition: background-color 0.5s;
-  position: sticky;
-  top: 0;
-  z-index: 999;
-  display: flex;
-  justify-content: center;
-}
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(60px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
 
-nav ul {
-   /*unordered list within the navigation menu*/
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+      }
+      40% {
+        transform: translateY(-10px);
+      }
+      60% {
+        transform: translateY(-5px);
+      }
+    }
 
-nav ul li {
-/* list within the navigation menu*/
-  display: inline-block;
-  margin-right: 10px;
-}
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.05);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
 
-nav ul li a {
-  color: #333;
-  text-decoration: none;
-  padding: 5px;
-  transition: color 0.5s;
-}
+    @keyframes float {
+      0% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+      100% {
+        transform: translateY(0px);
+      }
+    }
 
-section {
-  padding: 20px;
-  margin: 20px;
-  background-color: #f8f8f8;
-  border-radius: 5px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s, transform 0.5s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
+    /* Header Styles */
+    header {
+      background: var(--gradient-primary);
+      padding: 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
 
-h2 {
-  color: #333;
-}
+    header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+      animation: float 6s ease-in-out infinite;
+    }
 
-footer {
-  background-color: #4ea8c3; /* Deep blue footer background */
-  padding: 20px;
-  text-align: center;
-  transition: background-color 0.7s;
-}
-.about-content {
-  display: flex;
-  align-items: flex-start;
-}
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 1rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      animation: fadeInUp 1s ease-out;
+    }
 
-.about-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 300px;
-  position: relative;
-  overflow: hidden;
-  flex: 0 0 auto;
-  margin-right: 20px;
-  width: 100%;
-  border-radius: 10px;
-}
+    header p {
+      font-size: 1.25rem;
+      color: rgba(255,255,255,0.9);
+      font-weight: 400;
+      animation: fadeInUp 1s ease-out 0.2s both;
+    }
 
+    /* Navigation Styles */
+    nav {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.1), rgba(16, 185, 129, 0.1));
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 0 0 25px 25px;
+      margin: 0 2rem;
+      padding: 1rem 2rem;
+      position: sticky;
+      top: 10px;
+      z-index: 1000;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
 
-.about-text {
-  flex: 1 1 auto;
-}
+    nav.scrolled {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(16, 185, 129, 0.15));
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+      transform: translateY(-5px);
+      border-radius: 50px;
+    }
 
-.about-img::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-}
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+    }
 
-.about-img img {
-  display: block;
-  width: 100%;
-  border-radius: 10px; /* Adjust the border-radius value to control the roundness of the edges */
-}
-.certificate-link {
-  display: inline-block;
-}
+    nav ul li {
+      position: relative;
+    }
 
-.certificate-link img {
-  transition: box-shadow 0.3s;
-}
+    nav ul li a {
+      color: var(--text-primary);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      padding: 0.8rem 1.8rem;
+      border-radius: 50px;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
 
-.certificate-link:hover img {
-  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-}
-.fade-in {
-  opacity: 1;
-  transform: translateY(0);
-}
+    /* Navigation link background effect */
+    nav ul li a {
+      background: linear-gradient(135deg, transparent, transparent);
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
 
-.project-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
+    nav ul li a:hover {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+    }
 
-html {
-  scroll-behavior: smooth;
-}
+    /* Active/current page indicator */
+    nav ul li a.active {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+      color: white;
+      box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+    }
 
+    /* Navigation indicators - CSS-only visual elements */
+    nav ul li a::before {
+      content: '';
+      position: absolute;
+      left: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
 
+    nav ul li a:hover::before,
+    nav ul li a.active::before {
+      opacity: 1;
+      transform: translateY(-50%) scale(1.2);
+      box-shadow: 0 0 8px var(--primary-color);
+    }
 
+    /* Adjust padding to accommodate indicator */
+    nav ul li a {
+      padding-left: 2rem;
+    }
+
+    /* Advanced navigation effects */
+    nav ul li {
+      position: relative;
+    }
+
+    /* Liquid bubble effect behind active item using ::after */
+    nav ul li::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 0;
+      height: 0;
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(16, 185, 129, 0.2));
+      border-radius: 50px;
+      transform: translate(-50%, -50%);
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      z-index: -1;
+    }
+
+    nav ul li:hover::after {
+      width: calc(100% + 10px);
+      height: calc(100% + 10px);
+    }
+
+    /* Magnetic effect on hover */
+    nav ul li a {
+      will-change: transform;
+    }
+
+    /* Glow effect for navigation */
+    nav::after {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, #667eea, #764ba2, #f093fb, #f5576c, #4facfe, #00f2fe);
+      background-size: 400% 400%;
+      border-radius: inherit;
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 0.3s ease;
+      animation: gradientShift 8s ease infinite;
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    nav:hover::after {
+      opacity: 0.3;
+    }
+
+    /* Mobile menu toggle (for future enhancement) */
+    .mobile-menu-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 0.5rem;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu-toggle:hover {
+      background: rgba(37, 99, 235, 0.1);
+      transform: rotate(90deg);
+    }
+
+    /* Section Styles */
+    section {
+      padding: 4rem 2rem;
+      margin: 2rem 0;
+      background: var(--background-white);
+      border-radius: 20px;
+      box-shadow: var(--shadow-lg);
+      position: relative;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(60px);
+      transition: all 0.6s ease;
+    }
+
+    section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: var(--gradient-primary);
+    }
+
+    section.fade-in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 4px;
+      background: var(--gradient-secondary);
+      border-radius: 2px;
+    }
+
+    h3 {
+      color: var(--primary-color);
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+
+    /* About Section Styles */
+    .about-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 3rem;
+      animation: slideInLeft 1s ease-out;
+    }
+
+    .about-img {
+      flex: 0 0 300px;
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      transition: all 0.4s ease;
+    }
+
+    .about-img:hover {
+      transform: scale(1.05) rotate(2deg);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    }
+
+    .about-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 20px;
+      transition: all 0.4s ease;
+    }
+
+    .about-text {
+      flex: 1;
+      animation: slideInRight 1s ease-out 0.2s both;
+    }
+
+    .about-text p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      color: var(--text-secondary);
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin: 2rem 0;
+    }
+
+    .skill-category {
+      background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+      padding: 2rem;
+      border-radius: 15px;
+      text-align: center;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .skill-category:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl);
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+    }
+
+    .skill-category h4 {
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      font-weight: 600;
+    }
+
+    .skill-category ul {
+      list-style: none;
+    }
+
+    .skill-category li {
+      padding: 0.5rem 0;
+      color: var(--text-secondary);
+      transition: all 0.2s ease;
+    }
+
+    .skill-category li:hover {
+      color: var(--primary-color);
+      transform: translateX(5px);
+    }
+
+    /* Project Styles */
+    .project {
+      background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+      border-radius: 20px;
+      padding: 2rem;
+      margin: 2rem 0;
+      box-shadow: var(--shadow-md);
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255,255,255,0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.6s ease;
+    }
+
+    .project:hover::before {
+      left: 100%;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .project-content {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .project-content h3 {
+      font-size: 1.5rem;
+      color: var(--primary-color);
+      margin-bottom: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    .project:hover .project-content h3 {
+      transform: scale(1.05);
+    }
+
+    .project-content img {
+      border-radius: 15px;
+      box-shadow: var(--shadow-md);
+      transition: all 0.4s ease;
+      margin-bottom: 1rem;
+    }
+
+    .project-content img:hover {
+      transform: scale(1.05);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .project p {
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .project a {
+      display: inline-block;
+      background: var(--gradient-primary);
+      color: white;
+      padding: 0.75rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      box-shadow: var(--shadow-md);
+    }
+
+    .project a:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-xl);
+      animation: pulse 0.6s ease;
+    }
+
+    /* Certificate Link */
+    .certificate-link {
+      display: inline-block;
+      transition: all 0.4s ease;
+      border-radius: 15px;
+      overflow: hidden;
+    }
+
+    .certificate-link:hover {
+      transform: scale(1.05) rotate(3deg);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .certificate-link img {
+      border-radius: 15px;
+      transition: all 0.4s ease;
+    }
+
+    /* Contact Section */
+    #contact {
+      background: var(--gradient-accent);
+      color: white;
+    }
+
+    #contact h2 {
+      color: white;
+    }
+
+    #contact h2::after {
+      background: rgba(255,255,255,0.3);
+    }
+
+    .contact-info {
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .contact-info h3 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+
+    .contact-info > p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.9;
+    }
+
+    .contact-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      margin: 1rem 0;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .contact-item:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
+
+    .contact-label {
+      font-weight: 600;
+      font-size: 1rem;
+      min-width: 80px;
+      text-align: left;
+      position: relative;
+    }
+
+    .contact-label::before {
+      content: '';
+      position: absolute;
+      left: -10px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .contact-item a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      position: relative;
+    }
+
+    .contact-item a::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.3s ease;
+    }
+
+    .contact-item a:hover::after {
+      width: 100%;
+    }
+
+    .contact-item a:hover {
+      text-shadow: 0 0 10px rgba(255,255,255,0.5);
+    }
+
+    .contact-item span:not(.contact-label) {
+      font-weight: 400;
+    }
+
+    /* Responsive contact layout */
+    @media (max-width: 768px) {
+      .contact-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.5rem;
+      }
+      
+      .contact-label {
+        min-width: auto;
+        text-align: center;
+      }
+      
+      .contact-label::before {
+        display: none;
+      }
+    }
+
+    /* Footer */
+    footer {
+      background: var(--gradient-primary);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 4rem;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      body {
+        margin-left: 20px;
+        margin-right: 20px;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      nav ul {
+        flex-direction: column;
+        gap: 1rem;
+      }
+
+      .about-content {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-img {
+        flex: none;
+        max-width: 250px;
+        margin: 0 auto 2rem;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 2rem 1rem;
+      }
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--background-light);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gradient-primary);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--primary-color);
+    }
     </style>
 </head>
 <body>
 <header>
     <h1>Peter Stoyanov</h1>
-    <p>Software Developer, specializing in Python.</p>
+    <p>Full Stack Developer | Python | JavaScript | React | Django</p>
 </header>
 
 <nav>
@@ -171,62 +773,62 @@ html {
         </div>
         <div class="about-text">
             <p>
-                Hello everyone,<br>
-                my name is Peter Stoyanov, and I am thrilled to have the opportunity to share my story
-                with you.
-                Throughout my life, I have embarked on various careers and pursued diverse passions, each contributing
-                to my
-                personal growth and shaping me into the versatile individual I am today. Join me as I take you through
-                my
-                strengths, personal achievements, and unwavering commitment to learning.
+                Hello, I'm Peter Stoyanov - a Full Stack Developer with a unique journey that bridges technology and human experience.
+                With over 15 years of international experience in hospitality and entertainment industries, I bring strong 
+                communication, leadership, and problem-solving skills to software development.
             </p>
-            <h3>Strengths</h3>
+            
+            <h3>Professional Experience</h3>
             <p>
-                From a young age, computers have been my interest, and my immersion in the vast world of IT allows me to
-                excel
-                in learning new technologies, particularly Python. Moreover, my background as an avid luthier and sushi
-                chef
-                brings a unique set of experiences and knowledge that enables me to provide fresh perspectives and adapt
-                quickly
-                to new situations.
+                <strong>Software Developer / Communications Manager</strong> at Semantif.ai (2023 - Present)<br>
+                Building MVPs and demos for clients, managing customer relations, and working with AI/LLM technologies including LangChain.
             </p>
-            <h3>Personal Achievements</h3>
             <p>
-                My journey has taken me through various careers, and while they may seem different, they all share a
-                common
-                thread: people. As a clown performer, I have had the opportunity to lead workshops and trainings,
-                connecting
-                with individuals from all walks of life and professions. This international experience has taught me
-                invaluable
-                lessons in adaptability and resilience, as I have successfully built lives in multiple locations.
-                Additionally,
-                my mastery of the sushi craft has opened doors to exciting opportunities, including invitations to
-                forums,
-                events, and private parties. The satisfaction of providing unforgettable culinary experiences and
-                leading
-                workshops, projects, and restaurant trainings has fueled my drive for continuous learning and personal
-                growth.
+                <strong>Freelance Software Developer</strong> (2023)<br>
+                Working on diverse software projects with focus on PostgreSQL database design and Figma UI/UX design.
             </p>
-            <h3>Learning</h3>
             <p>
-                Currently, I am enrolled in an online full-stack Python Developer course, which I began in July 2022. I
-                am proud to have completed the "Advanced" module and passed the associated exams, showcasing my
-                commitment to
-                excellence. Currently, I am immersing myself in the OOP modules, with an anticipated
-                completion date in August. I stay abreast of the latest developments in
-                AI tools and applications, ensuring I remain at the forefront of technological advancements. In the near
-                future, I am excited to tackle the challenge of learning the German language.
+                <strong>Intern Software Developer</strong> at MEBEA, Switzerland (2022-2023)<br>
+                Full stack development on Project-K, a comprehensive school management platform.
+            </p>
+            
+            <h3>Unique Background</h3>
+            <p>
+                My diverse background spanning culinary arts, theatre, and international business gives me a holistic 
+                approach to product development and user experience. I've led teams across Europe, managed complex projects 
+                under pressure, and developed strong multicultural communication skills that enhance my technical work.
             </p>
 
-            <strong>Technical Skills:</strong>
-            <ul>
-                <li>Python 3.11</li>
-                <li>Github</li>
-                <li>SQL</li>
-                <li>Figma</li>
-
-            </ul>
-            </p>
+            <h3>Technical Skills</h3>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming</h4>
+                    <ul>
+                        <li>Python</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>HTML/CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks</h4>
+                    <ul>
+                        <li>React</li>
+                        <li>Next.js</li>
+                        <li>Django</li>
+                        <li>LangChain</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Others</h4>
+                    <ul>
+                        <li>PostgreSQL</li>
+                        <li>Docker</li>
+                        <li>Git/GitHub</li>
+                        <li>Figma</li>
+                    </ul>
+                </div>
+            </div>
             <a href="https://softuni.bg/certificates/details/173909/47301bb5" target="_blank" class="certificate-link">
                 <img src="certificate.png" alt="My Python Certificate" width="200" height="300">
             </a>
@@ -246,6 +848,93 @@ html {
 
 <section id="projects">
     <h2>Projects</h2>
+
+    <div class="project">
+        <div class="project-content">
+            <h3>Stoyanov Guitars - Personal Website</h3>
+        </div>
+        <p>
+            <strong>Description:</strong><br>
+            A personal project showcasing my hobby of guitar building (luthiery). The website features my custom-built guitars, 
+            craftsmanship details, and contact information for potential clients.
+        </p>
+        <p>
+            <strong>Tech Stack:</strong> Next.js<br>
+            <strong>Features:</strong> Responsive design, image galleries, contact forms, modern UI/UX
+        </p>
+        <a href="http://www.stoyanov-guitars.com" target="_blank">Visit Live Site</a>
+    </div>
+    <hr style="border: none; border-top: 2px solid #ccc; margin: 20px 0;">
+
+    <div class="project">
+        <div class="project-content">
+            <h3>Almost Famous Restaurant Website</h3>
+        </div>
+        <p>
+            <strong>Description:</strong><br>
+            A fully functional static website for a restaurant, built to establish their online presence. 
+            Features mobile-first design with Progressive Web App capabilities.
+        </p>
+        <p>
+            <strong>Tech Stack:</strong> Next.js with PWA<br>
+            <strong>Features:</strong> Mobile-first responsive design, Progressive Web App, fast loading, SEO optimized
+        </p>
+        <a href="http://www.almostfamous.bg" target="_blank">Visit Live Site</a>
+    </div>
+    <hr style="border: none; border-top: 2px solid #ccc; margin: 20px 0;">
+
+    <div class="project">
+        <div class="project-content">
+            <h3>Project-K - School Management Platform</h3>
+        </div>
+        <p>
+            <strong>Description:</strong><br>
+            My diploma project and assignment from Keibitz, Basel. A comprehensive platform for managing school schedules, 
+            resources, employees, and students. Built during my internship at MEBEA, Switzerland.
+        </p>
+        <p>
+            <strong>Tech Stack:</strong> Django, PostgreSQL<br>
+            <strong>Features:</strong> Complete CRUD operations, user management, scheduling system, resource allocation, 
+            admin dashboard, reporting features
+        </p>
+        <p><em>Enterprise project - code available upon request</em></p>
+    </div>
+    <hr style="border: none; border-top: 2px solid #ccc; margin: 20px 0;">
+
+    <div class="project">
+        <div class="project-content">
+            <h3>AI Article Generator</h3>
+        </div>
+        <p>
+            <strong>Description:</strong><br>
+            AI-powered article generation system using OpenAI's GPT-4 API integration. Built with Django framework 
+            to provide a web interface for generating high-quality articles automatically.
+        </p>
+        <p>
+            <strong>Tech Stack:</strong> Python, Django, OpenAI API, GPT-4<br>
+            <strong>Features:</strong> AI content generation, web interface, API integration, modern AI technologies
+        </p>
+        <a href="https://github.com/PeterStoyanov83/ArticleGenerator" target="_blank">View GitHub Repository</a>
+    </div>
+    <hr style="border: none; border-top: 2px solid #ccc; margin: 20px 0;">
+
+    <div class="project">
+        <div class="project-content">
+            <h3>Swiss Job Market Scraper</h3>
+        </div>
+        <p>
+            <strong>Description:</strong><br>
+            Automated job portal scraper specifically designed for the Swiss job market. Extracts job listings 
+            and exports data to Excel for analysis and job hunting optimization.
+        </p>
+        <p>
+            <strong>Tech Stack:</strong> Python, BeautifulSoup, Pandas, Requests<br>
+            <strong>Features:</strong> Web scraping, data processing, Excel export, automated data collection
+        </p>
+        <a href="https://github.com/PeterStoyanov83/Job_scraper_2023" target="_blank">View GitHub Repository</a>
+    </div>
+    <hr style="border: none; border-top: 2px solid #ccc; margin: 20px 0;">
+
 
     <div class="project">
         <div class="project-content">
@@ -364,69 +1053,240 @@ html {
         <a href="https://github.com/PeterStoyanov83/RockPaperSissorsLizardSpock" target="_blank">Link to the GitHub
             source code</a>
     </div>
-    <hr style="border: none; border-top: 2px solid #ccc; margin: 20px 0;">
-
-    <div class="project">
-        <div class="project-content">
-            <img src="basic_calc_thumbnail.png" alt="Calculator Machine Thumbnail" width="400" height="400">
-            <h3>Calculator Machine</h3>
-        </div>
-        <p>
-            <strong>Description:</strong><br>
-            The Calculator Machine is a simple command-line calculator program that allows users to perform basic
-            arithmetic operations such as addition, subtraction, multiplication, and division. It was created by Peter
-            Stoyanov and inspired by the SoftUni Fundamentals course taught by lecturer M. Zahariev.
-        </p>
-        <p>
-            <strong>To use the Calculator Machine, follow these steps:</strong>
-        </p>
-        <ol>
-            <li>Run the Python script in your preferred Python environment.</li>
-            <li>Choose one of the available options:</li>
-            <ul>
-                <li>1 - Addition</li>
-                <li>2 - Subtraction</li>
-                <li>3 - Multiplication</li>
-                <li>4 - Division</li>
-                <li>5 - Exit</li>
-            </ul>
-            <li>Enter the first number.</li>
-            <li>Enter the second number.</li>
-            <li>The program will perform the selected operation and display the result.</li>
-            <li>Repeat the process or choose option 5 to exit the program.</li>
-        </ol>
-        <a href="https://github.com/PeterStoyanov83/basic_calculator" target="_blank">Link to the GitHub source code</a>
-    </div>
 </section>
 
 <section id="contact">
     <h2>Contact Me</h2>
-    <p class="fade-in">
-        Peter Stoyanov<br><br>
-        Email: peterstoyanov83@gmail.com<br>
-
-    </p>
+    <div class="contact-info fade-in">
+        <h3>Peter Stoyanov</h3>
+        <p>Full Stack Developer</p>
+        
+        <div class="contact-item">
+            <span class="contact-label">Email:</span>
+            <a href="mailto:peterstoyanov83@gmail.com">peterstoyanov83@gmail.com</a>
+        </div>
+        
+        <div class="contact-item">
+            <span class="contact-label">Phone:</span>
+            <span>+359 877 150945</span>
+        </div>
+        
+        <div class="contact-item">
+            <span class="contact-label">LinkedIn:</span>
+            <a href="https://www.linkedin.com/in/pstoyanov" target="_blank">pstoyanov</a>
+        </div>
+        
+        <div class="contact-item">
+            <span class="contact-label">GitHub:</span>
+            <a href="https://github.com/PeterStoyanov83" target="_blank">PeterStoyanov83</a>
+        </div>
+    </div>
 </section>
 
 <footer>
-    <p>&copy; 2023 Peter Stoyanov. All rights reserved.</p>
+    <p>&copy; 2025 Peter Stoyanov. All rights reserved.</p>
 </footer>
 
 <script>
+    // Enhanced scroll animations
     function fadeInElements() {
       const sections = document.querySelectorAll("section");
+      const projects = document.querySelectorAll(".project");
+      const skillCategories = document.querySelectorAll(".skill-category");
 
-      sections.forEach(section => {
+      sections.forEach((section, index) => {
         const sectionTop = section.getBoundingClientRect().top;
+        const sectionHeight = section.offsetHeight;
 
         if (sectionTop < window.innerHeight * 0.8) {
           section.classList.add("fade-in");
+          section.style.animationDelay = `${index * 0.1}s`;
+        }
+      });
+
+      // Animate projects with stagger effect
+      projects.forEach((project, index) => {
+        const projectTop = project.getBoundingClientRect().top;
+        if (projectTop < window.innerHeight * 0.9) {
+          project.style.animation = `fadeInUp 0.8s ease-out ${index * 0.2}s both`;
+        }
+      });
+
+      // Animate skill categories
+      skillCategories.forEach((category, index) => {
+        const categoryTop = category.getBoundingClientRect().top;
+        if (categoryTop < window.innerHeight * 0.9) {
+          category.style.animation = `slideInRight 0.6s ease-out ${index * 0.1}s both`;
         }
       });
     }
 
-    window.addEventListener("scroll", fadeInElements);
-    window.addEventListener("load", fadeInElements);
+    // Navigation scroll effect
+    function handleNavScroll() {
+      const nav = document.querySelector('nav');
+      if (window.scrollY > 100) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }
+
+    // Parallax effect for header
+    function handleParallax() {
+      const header = document.querySelector('header');
+      const scrolled = window.pageYOffset;
+      const rate = scrolled * -0.5;
+      
+      if (header) {
+        header.style.transform = `translateY(${rate}px)`;
+      }
+    }
+
+    // Smooth reveal animation for elements
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.about-img, .certificate-link');
+      const contactItems = document.querySelectorAll('.contact-item');
+      
+      reveals.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.style.animation = 'fadeInUp 1s ease-out both';
+        }
+      });
+
+      // Animate contact items with stagger
+      contactItems.forEach((item, index) => {
+        const itemTop = item.getBoundingClientRect().top;
+        if (itemTop < window.innerHeight - 100) {
+          item.style.animation = `slideInRight 0.6s ease-out ${index * 0.1}s both`;
+        }
+      });
+    }
+
+    // Add hover effects and magnetic navigation
+    function addHoverEffects() {
+      const buttons = document.querySelectorAll('.project a, nav a');
+      const navItems = document.querySelectorAll('nav ul li a');
+      
+      buttons.forEach(button => {
+        button.addEventListener('mouseenter', function() {
+          this.style.transform = 'translateY(-3px) scale(1.02)';
+        });
+        
+        button.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1)';
+        });
+      });
+
+      // Add magnetic effect to navigation items
+      navItems.forEach(item => {
+        item.addEventListener('mousemove', function(e) {
+          const rect = this.getBoundingClientRect();
+          const x = e.clientX - rect.left - rect.width / 2;
+          const y = e.clientY - rect.top - rect.height / 2;
+          
+          const distance = Math.sqrt(x * x + y * y);
+          const maxDistance = 50;
+          
+          if (distance < maxDistance) {
+            const strength = (maxDistance - distance) / maxDistance;
+            const translateX = x * strength * 0.3;
+            const translateY = y * strength * 0.3;
+            
+            this.style.transform = `translateY(-3px) scale(1.05) translate(${translateX}px, ${translateY}px)`;
+          }
+        });
+        
+        item.addEventListener('mouseleave', function() {
+          this.style.transform = 'translateY(0) scale(1) translate(0, 0)';
+        });
+      });
+    }
+
+    // Active navigation highlight
+    function updateActiveNav() {
+      const sections = document.querySelectorAll('section');
+      const navLinks = document.querySelectorAll('nav a');
+      
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if (window.scrollY >= sectionTop - 200) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    }
+
+    // Initialize all animations
+    function initAnimations() {
+      fadeInElements();
+      handleNavScroll();
+      handleParallax();
+      revealOnScroll();
+      addHoverEffects();
+      updateActiveNav();
+    }
+
+    // Event listeners
+    window.addEventListener("scroll", initAnimations);
+    window.addEventListener("load", initAnimations);
+    window.addEventListener("resize", initAnimations);
+
+    // Initial load
+    document.addEventListener("DOMContentLoaded", function() {
+      initAnimations();
+      
+      // Add loading animation to body
+      document.body.style.animation = 'fadeInUp 1s ease-out';
+      
+      // Stagger section animations
+      const sections = document.querySelectorAll('section');
+      sections.forEach((section, index) => {
+        section.style.animationDelay = `${0.2 + index * 0.1}s`;
+      });
+    });
+
+    // Add intersection observer for better performance
+    if ('IntersectionObserver' in window) {
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            
+            // Add special animations for different elements
+            if (entry.target.classList.contains('skill-category')) {
+              entry.target.style.animation = 'bounce 0.8s ease-out';
+            }
+            
+            if (entry.target.classList.contains('project')) {
+              entry.target.style.animation = 'slideInLeft 0.8s ease-out';
+            }
+          }
+        });
+      }, observerOptions);
+
+      // Observe all animatable elements
+      document.querySelectorAll('section, .project, .skill-category').forEach(el => {
+        observer.observe(el);
+      });
+    }
 
 
 

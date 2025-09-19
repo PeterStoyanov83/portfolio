@@ -199,7 +199,7 @@ function loadProjects() {
             title: 'Peter Stoyanov Coaching',
             description: 'Professional coaching services to help individuals improve their communication and leadership skills.',
             tags: ['Web Development', 'Automation', 'Sendgrid', 'SEO'],
-            demo: 'https://www.peter-stoyanov.com',
+            demo: 'https://peter-stoyanov.com',
             code: '#'
         }
     ];

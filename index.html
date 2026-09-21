@@ -1,160 +1,363 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Peter Stoyanov - Full-Stack Python Developer & AI Enthusiast. Building AI projects and modern web applications.">
-    <meta name="keywords" content="Python, Django, JavaScript, AI, Full-Stack Developer, Web Development">
-    <meta name="author" content="Peter Stoyanov">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://peterstoyanov83.github.io/">
-    <meta property="og:title" content="Peter Stoyanov | Full-Stack Python Developer">
-    <meta property="og:description" content="Full-Stack Python Developer & AI Enthusiast. Building AI projects and modern web applications.">
-    <meta property="og:image" content="https://peterstoyanov83.github.io/images/og-image.jpg">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://peterstoyanov83.github.io/">
-    <meta name="twitter:title" content="Peter Stoyanov | Full-Stack Python Developer">
-    <meta name="twitter:description" content="Full-Stack Python Developer & AI Enthusiast. Building AI projects and modern web applications.">
-    <meta name="twitter:image" content="https://peterstoyanov83.github.io/images/og-image.jpg">
-
-    <title>Peter Stoyanov | Full-Stack Python Developer</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="favicon.ico">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Peter Stoyanov · Hand-built software</title>
+  <meta name="description" content="Full-stack Python & LLM engineer. AI integrations, automations, backends and payments for small businesses, built with a craftsman's care. Remote from Bulgaria, open to contract work.">
+  <meta property="og:title" content="Peter Stoyanov · Hand-built software">
+  <meta property="og:description" content="AI integrations, automations, backends and payments for small businesses.">
+  <meta property="og:image" content="https://peterstoyanov83.github.io/portfolio/img/workbench.jpg">
+  <meta name="theme-color" content="#f6f6f6">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,300..800&family=Martian+Mono:wdth,wght@87.5,400..500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/site.css">
+  <script>document.documentElement.classList.add('js')</script>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">PS</a>
-            <button class="mobile-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
-                <span class="sr-only">Menu</span>
-                <i class="fas fa-bars" aria-hidden="true"></i>
-            </button>
-            <ul id="primary-navigation" data-visible="false" class="nav-links">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#education" class="nav-link">Education</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
+  <a class="skip" href="#work">Skip to case studies</a>
+
+  <header class="top" id="top">
+    <a class="wordmark" href="#top" aria-label="Peter Stoyanov, back to top">Peter Stoyanov</a>
+    <nav aria-label="Sections">
+      <a href="#workshop">Workshop</a>
+      <a href="#services">Services</a>
+      <a href="#work">Case studies</a>
+      <a href="#contact">Contact</a>
     </nav>
+    <p class="status"><span class="dot" aria-hidden="true"></span>Open to contract work</p>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">Peter Stoyanov</h1>
-                <h2 class="hero-subtitle">Full-Stack Python Developer & AI Enthusiast</h2>
-                <p class="hero-text">I build AI projects, modern web apps, and help people improve communication skills through coaching.</p>
-                <div class="hero-cta">
-                    <a href="#projects" class="btn btn-primary">View My Work</a>
-                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
-                </div>
-            </div>
-            <div class="hero-image">
-                <div class="profile-image-container">
-                    <img src="peter_photo_clone.jpg" alt="Peter Stoyanov - Full-Stack Python Developer" class="profile-image">
-                </div>
-            </div>
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <h1 id="hero-title">
+          <span class="line"><span>Hand-built</span></span>
+          <span class="line"><span>software for</span></span>
+          <span class="line"><span>small businesses.</span></span>
+        </h1>
+        <p class="lede">I'm Peter, a full-stack Python &amp; LLM engineer. I add AI to real products, automate the work nobody should do by hand, and build the backends and payments underneath. Remote from Razgrad, Bulgaria.</p>
+        <div class="actions">
+          <a class="btn btn-solid" href="mailto:peterstoyanov83@gmail.com">Email me</a>
+          <a class="btn btn-line" href="#work">See the case studies</a>
         </div>
+      </div>
+
+      <figure class="bench">
+        <div class="bench-photo">
+          <img src="img/workbench.jpg" width="1300" height="1300"
+               alt="A guitar laid out on a workshop floor before glue-up: two bookmatched mahogany body halves with the outline drawn in pencil, a maple neck blank, pickup rings, control knobs and a bridge placed where they will go.">
+          <span class="pin" style="--x:51%;--y:16%;--i:0" aria-hidden="true">1</span>
+          <span class="pin" style="--x:24%;--y:40%;--i:1" aria-hidden="true">2</span>
+          <span class="pin" style="--x:58%;--y:77%;--i:2" aria-hidden="true">3</span>
+          <span class="pin" style="--x:72%;--y:68%;--i:3" aria-hidden="true">4</span>
+          <span class="pin" style="--x:58%;--y:92%;--i:4" aria-hidden="true">5</span>
+        </div>
+        <figcaption>
+          <ol class="legend">
+            <li>Neck blank</li>
+            <li>Body halves, bookmatched</li>
+            <li>Pickup rings</li>
+            <li>Controls</li>
+            <li>Bridge</li>
+          </ol>
+          <p>One of my guitars before glue-up. Every part is placed and checked before anything gets joined. I build software the same way.</p>
+        </figcaption>
+      </figure>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- Project cards will be added here via JavaScript -->
-            </div>
+    <!-- Welcome -->
+    <section class="welcome" id="workshop" aria-labelledby="welcome-title">
+      <div class="welcome-photos">
+        <figure class="ph">
+          <img src="img/tools.jpg" width="1100" height="1100" loading="lazy" alt="Chisels and small brass planes resting on a carved guitar body on the workbench, wood shavings around them.">
+          <figcaption>Carving a body with chisels and brass planes</figcaption>
+        </figure>
+        <figure class="ph">
+          <img src="img/red-guitar.jpg" width="495" height="1100" loading="lazy" alt="A finished guitar in red flame maple with black binding and two humbuckers, lying on the workbench.">
+          <figcaption>Finished, red flame maple</figcaption>
+        </figure>
+      </div>
 
-            <h2 class="section-title">More Projects</h2>
-            <div class="more-projects">
-                <!-- More project cards will be added here via JavaScript -->
-            </div>
-        </div>
+      <div class="welcome-text">
+        <h2 id="welcome-title">Welcome to my workshop</h2>
+        <p class="welcome-lede">I'm Peter. I spent fifteen years in international hospitality and performed on stage in more than twenty countries before I wrote my first line of Python. I also build electric guitars by hand, in a small workshop in Razgrad.</p>
+        <p>Both jobs taught me the same thing: the customer sees the finish, but what they pay for is everything underneath. That's how I build software for small businesses. AI that helps without going rogue, automations that give back real hours, and backends that handle money properly.</p>
+
+        <h3 class="process-title">How I work</h3>
+        <ol class="process">
+          <li><strong>Listen.</strong> What costs you time or money today? I start from your business, not from a technology.</li>
+          <li><strong>Lay out the parts.</strong> A short written plan you can read, with the risky parts named up front.</li>
+          <li><strong>Build and test.</strong> Anything that touches money, customers or personal data gets tests first.</li>
+          <li><strong>Hand over.</strong> Every project ends with a handoff document: what's built, why, and what's left. You own the code.</li>
+        </ol>
+      </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Skills & Tools</h2>
-            <div class="skills-grid">
-                <!-- Skills will be added here via JavaScript -->
-            </div>
-        </div>
+    <!-- Services -->
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="section-head">
+        <h2 id="services-title">What I can do for you</h2>
+        <p>Four kinds of work, often in the same project. Each one links to a case study where I've done it.</p>
+      </div>
+      <ul class="service-list">
+        <li>
+          <h3>AI integrations</h3>
+          <p>An assistant, smart search or document handling inside the product you already have. With guardrails, cost limits, and personal data kept away from the model.</p>
+          <p class="seen">Seen in <a href="#forge">Forge</a></p>
+        </li>
+        <li>
+          <h3>Automations</h3>
+          <p>Email sequences, social posting, data collection, reports and back-office steps your team repeats every week. A human approves anything that would be public.</p>
+          <p class="seen">Seen in <a href="#forge">Forge Agency</a>, <a href="#coaching">coaching site</a></p>
+        </li>
+        <li>
+          <h3>Backends &amp; payments</h3>
+          <p>APIs, databases and Stripe Connect flows, with the money logic separated out and tested on its own.</p>
+          <p class="seen">Seen in <a href="#najivo">НаЖиво.бг</a></p>
+        </li>
+        <li>
+          <h3>Websites &amp; web apps</h3>
+          <p>Complete products, front to back, in as many languages as your customers speak.</p>
+          <p class="seen">Seen in <a href="#kayu">Kayu</a>, <a href="#coaching">coaching site</a></p>
+        </li>
+      </ul>
     </section>
 
-    <!-- Education & Certifications Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education & Certifications</h2>
-            <div class="certification-grid">
-                <div class="certification-card">
-                    <div class="certification-content">
-                        <h3>Software Engineer with Python</h3>
-                        <p>Diploma in Software Engineering with Python, covering advanced programming concepts and practical applications.</p>
-                        <a href="Diploma for Software Engineer with Python.pdf" target="_blank" class="btn btn-primary">
-                            <i class="fas fa-file-pdf"></i> View Diploma
-                        </a>
-                    </div>
-                </div>
-            </div>
+    <!-- Case studies -->
+    <section class="work" id="work" aria-labelledby="work-title">
+      <div class="section-head">
+        <h2 id="work-title">Case studies</h2>
+        <p>Four products I designed and built end to end. Where the code is private, I've open-sourced the part that matters most, with its tests.</p>
+      </div>
+
+      <!-- Forge -->
+      <article class="object object-blue" id="forge" aria-labelledby="forge-title">
+        <div class="object-text">
+          <p class="origin">AI integration &amp; automation · my own product, in use</p>
+          <h3 id="forge-title">Forge</h3>
+          <p class="summary">A proactive AI assistant I built for my own workshop: tasks, calendar, email and voice in Bulgarian, English and Turkish. I'm now putting it to work as <strong>Forge Agency</strong>, which drafts and publishes Instagram and Facebook posts for small businesses.</p>
+
+          <dl class="spec">
+            <div><dt>Models</dt><dd>3-tier routing: local Ollama, then Claude Haiku, then Claude Sonnet</dd></div>
+            <div><dt>Cost</dt><dd>About 70% lower AI spend after prompt caching and context work</dd></div>
+            <div><dt>Channels</dt><dd>Instagram and Facebook through the Meta Graph API, one-click connect</dd></div>
+            <div><dt>Stack</dt><dd>FastAPI, PostgreSQL, React, background workers, 345 tests</dd></div>
+          </dl>
+
+          <ul class="decisions">
+            <li>The guardrail fails closed. If a check errors out, the draft counts as flagged, never as passed.</li>
+            <li>Comments from the internet are fenced off as untrusted text, so a planted instruction can't talk the guardrail into approving itself.</li>
+            <li>Every post and every reply waits for a human, then a publish window (24 hours by default). An append-only log records what went out and who approved it.</li>
+          </ul>
+
+          <a class="repo-link" href="https://github.com/PeterStoyanov83/agent-loop-core">Read the open-source agent loop</a>
         </div>
+
+        <figure class="object-diagram">
+          <svg viewBox="0 0 520 440" role="img" aria-labelledby="fg-title fg-desc">
+            <title id="fg-title">The layers between a message and a published post</title>
+            <desc id="fg-desc">Seven layers from top to bottom: input by chat, voice or social comments; model routing from a local model to Claude Haiku to Claude Sonnet; privacy masking of personal data; a fail-closed guardrail; human approval; a publish window; and an append-only audit log.</desc>
+            <defs>
+              <marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <g class="slabs">
+              <rect x="10" y="10"  width="450" height="48" rx="3"/>
+              <rect x="10" y="68"  width="450" height="48" rx="3"/>
+              <rect x="10" y="126" width="450" height="48" rx="3"/>
+              <rect x="10" y="184" width="450" height="48" rx="3" class="hot"/>
+              <rect x="10" y="242" width="450" height="48" rx="3" class="hot"/>
+              <rect x="10" y="300" width="450" height="48" rx="3"/>
+              <rect x="10" y="358" width="450" height="48" rx="3"/>
+            </g>
+            <g class="labels">
+              <text x="26" y="39"  class="k">INPUT</text>     <text x="140" y="39"  class="v">chat, voice (BG / EN / TR), comments</text>
+              <text x="26" y="97"  class="k">ROUTING</text>   <text x="140" y="97"  class="v">Ollama → Haiku → Sonnet</text>
+              <text x="26" y="155" class="k">PRIVACY</text>   <text x="140" y="155" class="v">personal data masked before the model</text>
+              <text x="26" y="213" class="k">GUARDRAIL</text> <text x="140" y="213" class="v">fail-closed, untrusted text fenced</text>
+              <text x="26" y="271" class="k">APPROVAL</text>  <text x="140" y="271" class="v">a human approves posts and replies</text>
+              <text x="26" y="329" class="k">WINDOW</text>    <text x="140" y="329" class="v">publish delay, 24 h by default</text>
+              <text x="26" y="387" class="k">AUDIT</text>     <text x="140" y="387" class="v">append-only log of what went out</text>
+              <text x="10" y="432" class="eq">tokens encrypted at rest · nothing publishes unseen</text>
+            </g>
+            <g class="wires" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path class="draw" pathLength="1" d="M490 14 V402" marker-end="url(#ah3)"/>
+            </g>
+          </svg>
+          <figcaption>Built in layers, like a laminated neck: any one of them can stop a post.</figcaption>
+        </figure>
+      </article>
+
+      <!-- НаЖиво -->
+      <article class="object object-red" id="najivo" aria-labelledby="nj-title">
+        <figure class="object-diagram">
+          <svg viewBox="0 0 520 410" role="img" aria-labelledby="tc-svg-title tc-svg-desc">
+            <title id="tc-svg-title">Money flow for one ticket order</title>
+            <desc id="tc-svg-desc">The buyer pays 45.66 euro in one Stripe destination charge. 43.20 euro is transferred to the organiser and 2.46 euro stays with the platform as the service fee. On refund, 43.20 euro goes back to the buyer and the transfer is reversed; the fee is kept.</desc>
+            <defs>
+              <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+                <path d="M0 0 L10 5 L0 10 z" fill="currentColor"/>
+              </marker>
+            </defs>
+            <g class="wires" fill="none" stroke="currentColor" stroke-width="1.6">
+              <path class="draw" pathLength="1" d="M105 80 V115 H260 V150" marker-end="url(#ah)"/>
+              <path class="draw" pathLength="1" d="M225 214 V255 H105 V300" marker-end="url(#ah)"/>
+              <path class="draw" pathLength="1" d="M295 214 V255 H415 V300" marker-end="url(#ah)"/>
+              <path class="dashed" d="M480 300 V48 H194" stroke-dasharray="5 5" marker-end="url(#ah)"/>
+            </g>
+            <g class="boxes">
+              <rect x="20" y="16" width="170" height="64" rx="3"/>
+              <rect x="175" y="150" width="170" height="64" rx="3"/>
+              <rect x="20" y="300" width="170" height="64" rx="3"/>
+              <rect x="330" y="300" width="170" height="64" rx="3"/>
+            </g>
+            <g class="labels">
+              <text x="34" y="40" class="k">BUYER</text>
+              <text x="34" y="66" class="v">pays €45.66</text>
+              <text x="189" y="174" class="k">STRIPE CHARGE</text>
+              <text x="189" y="200" class="v">destination, €45.66</text>
+              <text x="34" y="324" class="k">PLATFORM</text>
+              <text x="34" y="350" class="v">fee €2.46</text>
+              <text x="344" y="324" class="k">ORGANISER</text>
+              <text x="344" y="350" class="v">transfer €43.20</text>
+              <text x="210" y="38" class="note">refund €43.20, transfer reversed</text>
+              <text x="20" y="400" class="eq">45.66 = 43.20 + 2.46 · fee kept on refund</text>
+            </g>
+          </svg>
+          <figcaption>One four-ticket order: 4 × €12.00, 10% group discount, fee 5% + €0.30.</figcaption>
+        </figure>
+
+        <div class="object-text">
+          <p class="origin">Backend &amp; payments · <a href="https://najivo.bg">najivo.bg</a>, pre-launch</p>
+          <h3 id="nj-title">НаЖиво.бг</h3>
+          <p class="summary">Ticketing for Bulgarian cultural venues. Venues sell seats, buyers pay once, and Stripe Connect splits the money between the venue and the platform. The hard part is making every euro add up, including after a refund.</p>
+
+          <dl class="spec">
+            <div><dt>Payments</dt><dd>Stripe Connect destination charges, refunds with transfer reversal</dd></div>
+            <div><dt>Platform</dt><dd>FastAPI, PostgreSQL, Redis seat locking, React, 2FA, invoices</dd></div>
+            <div><dt>Money</dt><dd><code>Decimal</code> everywhere, ROUND_HALF_UP, integer cents at the API</dd></div>
+          </dl>
+
+          <ul class="decisions">
+            <li>The fee is <code>max(percent × total + fixed, minimum)</code>, because a plain percentage loses money on cheap tickets once card processing is paid.</li>
+            <li>Refunds call the provider first, with an idempotency key. Seat release and emails run after, and a failure there can never undo a refund.</li>
+            <li>Connect refunds reverse the transfer to the venue. Found in end-to-end testing, when two test refunds drained the platform balance.</li>
+          </ul>
+
+          <a class="repo-link" href="https://github.com/PeterStoyanov83/ticketing-core">Read the open-source payments core</a>
+        </div>
+      </article>
+
+      <div class="pair">
+        <!-- Kayu -->
+        <article class="object object-wood" id="kayu" aria-labelledby="kayu-title">
+          <figure class="object-photo">
+            <img src="img/fretboard.jpg" width="900" height="900" loading="lazy" alt="A fretboard in progress: pale spalted wood with a dark streak, fret slots cut and round red inlay dots.">
+          </figure>
+          <div class="object-text">
+            <p class="origin">Website &amp; web app · my own venture, live</p>
+            <h3 id="kayu-title">Kayu</h3>
+            <p class="summary">A marketplace for exotic tonewood. Producers in Asia, Africa and South America list their wood; luthiers in Europe and the US buy it directly. The kind of wood this fretboard is made from.</p>
+            <dl class="spec">
+              <div><dt>Apps</dt><dd>FastAPI backend, React Native / Expo for iOS, Android and web</dd></div>
+              <div><dt>Languages</dt><dd>7: English, German, French, Spanish, Italian, Indonesian, Bulgarian</dd></div>
+            </dl>
+            <ul class="decisions">
+              <li>Translations are typed against English: a missing key in an existing language fails the build, while a new language falls back to English instead of blocking release.</li>
+              <li>The 22,000 words of legal terms stay human-written. They're what a dispute would be read against, so they aren't machine-translated.</li>
+            </ul>
+            <a class="repo-link" href="https://kayushop.eu">Visit kayushop.eu</a>
+          </div>
+        </article>
+
+        <!-- Coaching -->
+        <article class="object object-green" id="coaching" aria-labelledby="co-title">
+          <div class="object-text">
+            <p class="origin">Automation &amp; website · live</p>
+            <h3 id="co-title">Coaching site</h3>
+            <p class="summary">The site for my communication and stage-presence coaching. It collects leads, runs the email follow-up on its own, and tells me what happened, in Bulgarian and English.</p>
+
+            <ol class="flow" aria-label="How a lead moves through the system">
+              <li>Waitlist or company enquiry form</li>
+              <li>Saved locally, synced to MailerLite</li>
+              <li>Scheduled email sequence, with retries</li>
+              <li>Webhooks: opened, clicked, bounced, unsubscribed</li>
+              <li>Admin dashboard with export</li>
+            </ol>
+
+            <dl class="spec">
+              <div><dt>Stack</dt><dd>Python backend, Next.js front-end, SQLite fallback if MailerLite is down, deploys via GitHub Actions</dd></div>
+            </dl>
+            <a class="repo-link" href="https://www.peter-stoyanov.com">Visit peter-stoyanov.com</a>
+          </div>
+        </article>
+      </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="contact-text">I'm always open to discussing new projects, creative ideas or opportunities to be part of your visions.</p>
-            <div class="contact-links">
-                <a href="mailto:peterstoyanov83@gmail.com" class="contact-link">
-                    <i class="fas fa-envelope"></i>
-                    <span>peterstoyanov83@gmail.com</span>
-                </a>
-                <a href="https://github.com/PeterStoyanov83" target="_blank" rel="noopener noreferrer" class="contact-link">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub</span>
-                </a>
-                <a href="https://www.linkedin.com/in/pstoyanov/" target="_blank" rel="noopener noreferrer" class="contact-link">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn</span>
-                </a>
-            </div>
+    <!-- Stack -->
+    <section class="stack" id="stack" aria-labelledby="stack-title">
+      <div class="section-head">
+        <h2 id="stack-title">Tools and training</h2>
+      </div>
+      <dl class="sheet">
+        <div><dt>Backend</dt><dd>Python, FastAPI, Django, background workers</dd></div>
+        <div><dt>AI</dt><dd>Anthropic Claude API, tool use, prompt caching, model routing, local models via Ollama, PII masking</dd></div>
+        <div><dt>Automation</dt><dd>Schedulers, webhooks, email platforms, Meta Graph API, scraping</dd></div>
+        <div><dt>Payments</dt><dd>Stripe Connect: destination charges, refunds with transfer reversal, invoicing</dd></div>
+        <div><dt>Data</dt><dd>PostgreSQL, Redis, SQLite</dd></div>
+        <div><dt>Front-end</dt><dd>React, Next.js, React Native / Expo, TypeScript</dd></div>
+        <div><dt>Delivery</dt><dd>Docker, GitHub Actions, Railway, tests that run without network or keys</dd></div>
+      </dl>
+
+      <div class="diploma">
+        <div class="diploma-head">
+          <h3>Software Engineer with Python</h3>
+          <p>Professional qualification diploma, Software University (SoftUni), 2025. 13 courses, 354 hours.</p>
+          <p class="diploma-links">
+            <a href="https://softuni.bg/Certificates/Details/250339/15236086">Verify on softuni.bg</a>
+            <a href="Diploma%20for%20Software%20Engineer%20with%20Python.pdf">Diploma (PDF)</a>
+          </p>
         </div>
+        <table class="grades">
+          <caption>Courses and grades. 6.00 is the top grade on the Bulgarian scale.</caption>
+          <thead><tr><th scope="col">Course</th><th scope="col">Hours</th><th scope="col">Grade</th></tr></thead>
+          <tbody>
+            <tr><td>Programming Basics</td><td>17</td><td>6.00</td></tr>
+            <tr><td>Programming Fundamentals</td><td>56</td><td>6.00</td></tr>
+            <tr><td>Python Advanced</td><td>21</td><td>6.00</td></tr>
+            <tr><td>Python OOP</td><td>33</td><td>6.00</td></tr>
+            <tr><td>PostgreSQL</td><td>21</td><td>6.00</td></tr>
+            <tr><td>Python ORM</td><td>30</td><td>6.00</td></tr>
+            <tr><td>Django Basics</td><td>36</td><td>6.00</td></tr>
+            <tr><td>Django Advanced</td><td>36</td><td>6.00</td></tr>
+            <tr><td>HTML &amp; CSS</td><td>15</td><td>5.70</td></tr>
+            <tr><td>JS Front-End</td><td>32</td><td>5.67</td></tr>
+            <tr><td>QA Basics</td><td>12</td><td>5.74</td></tr>
+            <tr><td>Software Engineering and DevOps</td><td>24</td><td>6.00</td></tr>
+            <tr><td>Containers and Cloud</td><td>21</td><td>6.00</td></tr>
+          </tbody>
+        </table>
+      </div>
     </section>
+  </main>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; <span id="year"></span> Peter Stoyanov. All rights reserved.</p>
-            <p>Built with ❤️ and ☕</p>
-        </div>
-    </footer>
+  <!-- Contact -->
+  <footer class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title">Got work that should run by itself, or can't afford to break?</h2>
+    <p>I'm open to remote contract work: AI integrations, automations, backends and payments. Send a few lines about your business and what's eating your time.</p>
+    <div class="contact-links">
+      <a class="big-link" href="mailto:peterstoyanov83@gmail.com">peterstoyanov83@gmail.com</a>
+      <a class="big-link" href="https://www.linkedin.com/in/pstoyanov/">linkedin.com/in/pstoyanov</a>
+      <a class="big-link" href="https://github.com/PeterStoyanov83">github.com/PeterStoyanov83</a>
+    </div>
+    <p class="fine">© 2026 Peter Stoyanov · Razgrad, Bulgaria · Hand-written HTML and CSS, no framework</p>
+  </footer>
 
-    <!-- Back to top button -->
-    <a href="#home" class="back-to-top" aria-label="Back to top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <!-- JavaScript -->
-    <script src="js/main.js"></script>
+  <script src="js/site.js" defer></script>
 </body>
 </html>

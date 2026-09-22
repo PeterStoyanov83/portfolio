@@ -309,6 +309,35 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
 .process li::before { content: counter(step); position: absolute; left: 0; top: 1.05rem; font-family: var(--mono); font-size: 0.75rem; color: var(--ink); }
 .process strong { color: var(--ink); font-weight: 650; }
 
+/* ---------- Anatomy (backend = build, front-end = finish) ---------- */
+.anatomy { grid-column: 1 / -1; margin-top: clamp(1rem, 0.5rem + 2vw, 2.5rem); }
+.anatomy-title {
+  font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); font-variation-settings: "wdth" 110; letter-spacing: -0.025em;
+  padding-bottom: 1rem; margin-bottom: 1.2rem; border-bottom: 1px solid var(--ink);
+}
+.anatomy-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: clamp(1rem, 0.6rem + 1.5vw, 2rem); }
+.anatomy-panel { border-radius: 8px; padding: clamp(1.3rem, 0.8rem + 2vw, 2.4rem); }
+.anatomy-build { background: var(--wood); color: var(--ink); }
+.anatomy-finish {
+  background: linear-gradient(160deg, oklch(0.28 0.004 60), var(--ink) 55%);
+  color: var(--bg);
+  box-shadow: inset 0 1px 0 oklch(1 0 0 / 0.12);
+}
+.anatomy-kicker {
+  margin: 0; font-size: clamp(1.8rem, 1.3rem + 1.8vw, 2.8rem); font-weight: 780;
+  font-variation-settings: "wdth" 116; letter-spacing: -0.03em; line-height: 1;
+}
+.anatomy-sub { margin: 0.5rem 0 1.4rem; font-size: 1rem; }
+.anatomy-finish .anatomy-sub { color: oklch(0.82 0 0); }
+.anatomy dl { margin: 0; border-top: 1px solid currentColor; }
+.anatomy dl div {
+  display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 1rem;
+  padding: 0.75rem 0; border-bottom: 1px solid color-mix(in srgb, currentColor 30%, transparent);
+}
+.anatomy dt { font-family: var(--mono); font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.04em; padding-top: 0.2rem; }
+.anatomy dd { margin: 0; line-height: 1.45; }
+.anatomy-finish dd { color: oklch(0.9 0 0); }
+
 /* ---------- Services ---------- */
 .services { max-width: var(--max); margin: 0 auto; padding: 0 var(--gutter) clamp(4rem, 2rem + 6vw, 8rem); }
 .service-list { list-style: none; margin: 0; padding: 0; }
@@ -397,6 +426,7 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
   .object-red .object-diagram { order: 1; }
   .service-list li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
   .welcome-photos { position: static; }
+  .anatomy-grid { grid-template-columns: minmax(0, 1fr); }
   .service-list .seen { justify-self: start; text-align: left; }
   .section-head { grid-template-columns: minmax(0, 1fr); }
   .section-head p { justify-self: start; }
@@ -405,7 +435,7 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
   .top nav { display: none; }
   .status { margin-left: auto; }
   .bench figcaption { grid-template-columns: minmax(0, 1fr); }
-  .spec div, .sheet div { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
+  .spec div, .sheet div, .anatomy dl div { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
   /* Keep diagram text readable on phones: scroll sideways instead of shrinking. */
   .object-diagram { overflow-x: auto; overscroll-behavior-x: contain; }
   .object-diagram svg { min-width: 30rem; }

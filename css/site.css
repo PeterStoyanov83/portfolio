@@ -168,7 +168,6 @@ h1 .line > span { display: inline-block; }
   font-family: var(--mono); font-size: 0.7rem; line-height: 1.9; color: var(--ink);
 }
 .legend li { counter-increment: pin; white-space: nowrap; }
-.legend .maps { color: var(--ink-2); }
 .legend li::before {
   content: counter(pin); display: inline-grid; place-items: center;
   width: 1.2rem; height: 1.2rem; margin-right: 0.5rem; border-radius: 50%;

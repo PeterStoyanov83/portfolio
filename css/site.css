@@ -287,6 +287,16 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
 .welcome-text { padding-top: 1.4rem; border-top: 1px solid var(--ink); }
 .welcome-text > p { font-size: 1.08rem; line-height: 1.65; color: var(--ink-2); max-width: 58ch; }
 .welcome-text .welcome-lede { font-size: clamp(1.2rem, 1rem + 0.7vw, 1.45rem); line-height: 1.5; color: var(--ink); margin-top: 1.4rem; }
+.plain {
+  margin: 2.2rem 0 0; padding: 1.4rem 1.5rem; border-radius: 6px;
+  background: var(--surface); box-shadow: inset 0 0 0 1px var(--rule);
+}
+.plain .plain-line {
+  margin: 0 0 0.6rem; color: var(--ink);
+  font-size: clamp(1.35rem, 1.05rem + 1vw, 1.9rem); line-height: 1.2; font-weight: 700;
+  font-variation-settings: "wdth" 108; letter-spacing: -0.02em; text-wrap: balance;
+}
+.plain p { margin: 0; color: var(--ink-2); line-height: 1.6; max-width: 56ch; }
 .process-title {
   font-size: 1.05rem; font-weight: 700; font-variation-settings: "wdth" 100; letter-spacing: 0;
   margin-top: 2.4rem; margin-bottom: 0.4rem;

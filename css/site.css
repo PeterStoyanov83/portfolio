@@ -102,7 +102,7 @@ p { text-wrap: pretty; }
   max-width: var(--max); margin: 0 auto;
   padding: clamp(2.5rem, 1rem + 6vw, 6.5rem) var(--gutter) clamp(3rem, 2rem + 5vw, 7rem);
   display: grid; gap: clamp(2.5rem, 1rem + 4vw, 5rem);
-  grid-template-columns: minmax(0, 1.3fr) minmax(0, 0.9fr);
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
   align-items: center;
 }
 h1 {
@@ -131,7 +131,20 @@ h1 .line > span { display: inline-block; }
 .btn-line:hover { background: var(--ink); color: var(--bg); }
 .btn:active { transform: translateY(1px); }
 
-.bench { margin: 0; }
+.bench {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.4614fr);
+  gap: clamp(0.8rem, 0.5rem + 1vw, 1.4rem); align-items: start;
+}
+.bench figure, .bench-start, .bench-end { margin: 0; }
+.bench-label {
+  margin: 0 0 0.6rem; font-family: var(--mono); font-size: 0.72rem; color: var(--ink);
+  padding-bottom: 0.5rem; border-bottom: 1px solid var(--ink);
+}
+.bench-end img {
+  width: 100%; height: auto; border-radius: 6px;
+  box-shadow: 0 1px 0 var(--rule), 0 24px 48px -28px oklch(0.2 0.02 50 / 0.45);
+}
+.bench-end figcaption { margin-top: 1rem; font-size: 0.9rem; color: var(--ink-2); line-height: 1.5; }
 .bench-photo {
   position: relative; border-radius: 6px; overflow: hidden;
   background: oklch(0.8 0.01 60);
@@ -146,7 +159,7 @@ h1 .line > span { display: inline-block; }
   background: var(--bg); color: var(--ink);
   box-shadow: 0 0 0 1.5px var(--ink), 0 4px 10px oklch(0 0 0 / 0.3);
 }
-.bench figcaption {
+.bench-start figcaption {
   display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.5rem;
   margin-top: 1rem; font-size: 0.9rem; color: var(--ink-2);
 }
@@ -160,7 +173,7 @@ h1 .line > span { display: inline-block; }
   width: 1.2rem; height: 1.2rem; margin-right: 0.5rem; border-radius: 50%;
   border: 1px solid var(--ink); font-size: 0.62rem;
 }
-.bench figcaption p { margin: 0; max-width: 28ch; }
+.bench-start figcaption p { margin: 0; max-width: 28ch; }
 
 /* ---------- Section heads ---------- */
 .section-head {
@@ -435,7 +448,8 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
 @media (max-width: 44rem) {
   .top nav { display: none; }
   .status { margin-left: auto; }
-  .bench figcaption { grid-template-columns: minmax(0, 1fr); }
+  .bench-start figcaption { grid-template-columns: minmax(0, 1fr); }
+  .bench-label { min-height: 3.2em; display: flex; align-items: flex-end; }
   .spec div, .sheet div, .anatomy dl div { grid-template-columns: minmax(0, 1fr); gap: 0.15rem; }
   /* Keep diagram text readable on phones: scroll sideways instead of shrinking. */
   .object-diagram { overflow-x: auto; overscroll-behavior-x: contain; }

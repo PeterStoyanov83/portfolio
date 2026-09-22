@@ -160,7 +160,7 @@ h1 .line > span { display: inline-block; }
   box-shadow: 0 0 0 1.5px var(--ink), 0 4px 10px oklch(0 0 0 / 0.3);
 }
 .bench-start figcaption {
-  display: grid; grid-template-columns: auto 1fr; gap: 0.4rem 1.5rem;
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: 0.8rem;
   margin-top: 1rem; font-size: 0.9rem; color: var(--ink-2);
 }
 .legend {
@@ -168,12 +168,13 @@ h1 .line > span { display: inline-block; }
   font-family: var(--mono); font-size: 0.7rem; line-height: 1.9; color: var(--ink);
 }
 .legend li { counter-increment: pin; white-space: nowrap; }
+.legend .maps { color: var(--ink-2); }
 .legend li::before {
   content: counter(pin); display: inline-grid; place-items: center;
   width: 1.2rem; height: 1.2rem; margin-right: 0.5rem; border-radius: 50%;
   border: 1px solid var(--ink); font-size: 0.62rem;
 }
-.bench-start figcaption p { margin: 0; max-width: 34ch; }
+.bench-start figcaption p { margin: 0; max-width: 46ch; }
 
 /* ---------- Section heads ---------- */
 .section-head {

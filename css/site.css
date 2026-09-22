@@ -248,12 +248,13 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
 /* ---------- Stack sheet + diploma ---------- */
 .stack .section-head { grid-template-columns: 1fr; }
 .sheet {
-  margin: 0 0 clamp(3rem, 2rem + 3vw, 5rem);
+  margin: 0;
   display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr)); column-gap: 3rem;
 }
 .sheet div { grid-template-columns: 8rem minmax(0, 1fr); padding: 0.9rem 0; border-bottom-color: var(--rule); }
 .sheet dd { font-size: 1.05rem; }
 
+  .since-title { font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); font-variation-settings: "wdth" 110; letter-spacing: -0.025em; margin: clamp(3rem, 2rem + 3vw, 5rem) 0 1.2rem; padding-bottom: 1rem; border-bottom: 1px solid var(--ink); }
 .diploma {
   display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); gap: clamp(1.5rem, 1rem + 3vw, 4rem);
   padding: clamp(1.4rem, 0.8rem + 3vw, 3rem);
@@ -261,7 +262,8 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
   box-shadow: inset 0 0 0 1px var(--rule);
 }
 .diploma h3 { font-size: clamp(1.7rem, 1.2rem + 1.8vw, 2.6rem); font-variation-settings: "wdth" 108; }
-.diploma-head p { color: var(--ink-2); max-width: 38ch; }
+.diploma-head p { color: var(--ink-2); max-width: 40ch; line-height: 1.6; }
+.diploma-head .diploma-kicker { font-family: var(--mono); font-size: 0.7rem; color: var(--ink); margin: 0 0 0.8rem; }
 .diploma-links { display: flex; flex-wrap: wrap; gap: 0.6rem 1.4rem; }
 .diploma-links a { color: var(--ink); font-weight: 600; }
 .grades { width: 100%; border-collapse: collapse; font-size: 0.93rem; font-variant-numeric: tabular-nums; }

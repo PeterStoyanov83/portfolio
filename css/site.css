@@ -278,11 +278,11 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
   align-items: start;
 }
 .welcome-photos {
-  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.45fr); gap: clamp(0.6rem, 0.3rem + 1vw, 1.1rem);
-  align-items: start; padding-top: 1.4rem; border-top: 1px solid var(--ink);
-  position: sticky; top: 5rem;
+  display: grid; grid-template-columns: minmax(0, 1fr); gap: clamp(1rem, 0.6rem + 1vw, 1.5rem);
+  padding-top: 1.4rem; border-top: 1px solid var(--ink);
 }
-.welcome-photos img { height: auto; }
+.welcome-photos img { width: 100%; height: auto; }
+.welcome-photos .ph:first-child img { aspect-ratio: 4 / 3; object-fit: cover; object-position: center 60%; }
 .ph { margin: 0; }
 .ph img { width: 100%; border-radius: 5px; object-fit: cover; }
 .ph figcaption { font-family: var(--mono); font-size: 0.66rem; color: var(--ink-2); margin-top: 0.45rem; }
@@ -427,7 +427,6 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
   .hero, .object, .diploma, .welcome-grid, .pair { grid-template-columns: minmax(0, 1fr); }
   .object-red .object-diagram { order: 1; }
   .service-list li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
-  .welcome-photos { position: static; }
   .anatomy-grid { grid-template-columns: minmax(0, 1fr); }
   .service-list .seen { justify-self: start; text-align: left; }
   .section-head { grid-template-columns: minmax(0, 1fr); }

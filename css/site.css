@@ -272,6 +272,8 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
 .welcome {
   max-width: var(--max); margin: 0 auto;
   padding: 0 var(--gutter) clamp(4rem, 2rem + 6vw, 8rem);
+}
+.welcome-grid {
   display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: clamp(2rem, 1rem + 4vw, 5rem);
   align-items: start;
 }
@@ -310,7 +312,7 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
 .process strong { color: var(--ink); font-weight: 650; }
 
 /* ---------- Anatomy (backend = build, front-end = finish) ---------- */
-.anatomy { grid-column: 1 / -1; margin-top: clamp(1rem, 0.5rem + 2vw, 2.5rem); }
+.anatomy { margin-top: clamp(3rem, 2rem + 3vw, 5rem); }
 .anatomy-title {
   font-size: clamp(1.6rem, 1.2rem + 1.4vw, 2.4rem); font-variation-settings: "wdth" 110; letter-spacing: -0.025em;
   padding-bottom: 1rem; margin-bottom: 1.2rem; border-bottom: 1px solid var(--ink);
@@ -422,7 +424,7 @@ svg .eq { font-family: var(--mono); font-size: 11px; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 60rem) {
-  .hero, .object, .diploma, .welcome, .pair { grid-template-columns: minmax(0, 1fr); }
+  .hero, .object, .diploma, .welcome-grid, .pair { grid-template-columns: minmax(0, 1fr); }
   .object-red .object-diagram { order: 1; }
   .service-list li { grid-template-columns: minmax(0, 1fr); gap: 0.5rem; }
   .welcome-photos { position: static; }
